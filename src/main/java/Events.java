@@ -1,15 +1,17 @@
+import java.time.LocalDateTime;
+
 public class Events {
 
 
     private String eventName;
     private String location;
-    private String time;
+    private LocalDateTime dateAndStartTime;
     private String Details;
 
-    public Events(String eventName, String location, String time, String details) {
+    public Events(String eventName, String location, LocalDateTime dateAndStartTime, String details) {
         this.eventName = eventName;
         this.location = location;
-        this.time = time;
+        this.dateAndStartTime = dateAndStartTime;
         Details = details;
     }
 
@@ -21,8 +23,8 @@ public class Events {
         return location;
     }
 
-    public String getTime() {
-        return time;
+    public LocalDateTime getTime() {
+        return dateAndStartTime;
     }
 
     public String getDetails() {
@@ -37,7 +39,7 @@ public class Events {
         return "Events{" +
                 "eventName='" + eventName + '\'' +
                 ", location='" + location + '\'' +
-                ", time='" + time + '\'' +
+                ", Date / Start time='" + dateAndStartTime + '\'' +
                 ", Details='" + Details + '\'' +
                 '}';
     }
@@ -45,7 +47,7 @@ public class Events {
     public static class EventsBuilder {
         private String eventName;
         private String location;
-        private String time;
+        private LocalDateTime dateAndStartTime;
         private String details;
 
         public EventsBuilder setEventName(String eventName) {
@@ -58,8 +60,8 @@ public class Events {
             return this;
         }
 
-        public EventsBuilder setTime(String time) {
-            this.time = time;
+        public EventsBuilder setTime(LocalDateTime time) {
+            this.dateAndStartTime = dateAndStartTime;
             return this;
         }
 
@@ -69,7 +71,7 @@ public class Events {
         }
 
         public Events createEvents() {
-            return new Events(eventName, location, time, details);
+            return new Events(eventName, location, dateAndStartTime, details);
         }
     }
 }
