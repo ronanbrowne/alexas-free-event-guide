@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Events {
 
@@ -7,12 +8,15 @@ public class Events {
     private String location;
     private LocalDateTime dateAndStartTime;
     private String Details;
+    private LocalTime endTime;
 
-    public Events(String eventName, String location, LocalDateTime dateAndStartTime, String details) {
+
+    public Events(String eventName, String location, LocalDateTime dateAndStartTime, String details, LocalTime endTime) {
         this.eventName = eventName;
         this.location = location;
         this.dateAndStartTime = dateAndStartTime;
-        Details = details;
+        this.Details = details;
+        this.endTime = endTime;
     }
 
     public String getEventName() {
@@ -31,7 +35,15 @@ public class Events {
         return Details;
     }
 
-//here
+    public LocalDateTime getDateAndStartTime() {
+        return dateAndStartTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    //here
 
 
     @Override
@@ -49,6 +61,7 @@ public class Events {
         private String location;
         private LocalDateTime dateAndStartTime;
         private String details;
+        private LocalTime endTime;
 
         public EventsBuilder setEventName(String eventName) {
             this.eventName = eventName;
@@ -60,7 +73,7 @@ public class Events {
             return this;
         }
 
-        public EventsBuilder setTime(LocalDateTime time) {
+        public EventsBuilder setTime(LocalDateTime dateAndStartTime) {
             this.dateAndStartTime = dateAndStartTime;
             return this;
         }
@@ -70,8 +83,15 @@ public class Events {
             return this;
         }
 
-        public Events createEvents() {
-            return new Events(eventName, location, dateAndStartTime, details);
+        public EventsBuilder setEndTime(LocalTime endTime) {
+            this.endTime = endTime;
+            return this;
         }
+
+        public Events createEvents() {
+            return new Events(eventName, location, dateAndStartTime, details, endTime);
+        }
+
+
     }
 }

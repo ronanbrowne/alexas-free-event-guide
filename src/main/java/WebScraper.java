@@ -4,6 +4,7 @@ import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
@@ -17,6 +18,9 @@ public class WebScraper {
     private static final String EVENT_TIME = "tbody > tr > td > table > tbody > tr > td:nth-child(2) > h3";
     private static final String EVENT_NAME = "tbody > tr > td > table > tbody > tr > td:nth-child(2) > h2";
 
+
+    static LocalTime endTime ;
+
     public static void main(String[] args) {
 
         //initialization
@@ -26,6 +30,8 @@ public class WebScraper {
         String eventLocation = "";
         String eventDetails = "";
         List<Events> upcomingEvents = new ArrayList<>();
+        LocalTime eventEndDate = null;
+
 
         //Jsoup set up
         try {
@@ -38,31 +44,16 @@ public class WebScraper {
 
         System.out.println("Total number of events retrieved: " + upcomingEvents.size());
 
-    /*    String iso8601 = "22:00, Fri 11 May";
-        ZonedDateTime zdt = ZonedDateTime.parse(iso8601);
-        LocalDateTime ldt = zdt.toLocalDateTime();*/
 
-        // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH mm E dd MM YYYY" );
-        //  LocalDate aLD = LocalDate.parse(strDate);
-
-        // LocalDateTime dateTime = LocalDateTime.parse("22 00 Fri 11 08 2018",formatter);
-        //String formattedDateTime = dateTime.format(formatter); // "1986-04-08 12:30"
+  }
 
 
-        // LocalDateTime dateTime = LocalDateTime.parse("14:30, Sat 05 May",formatter);
-
-        String x = "13:00 – 17:30, Sat 05 May";
-
-        //getDateStartTimeFromHTML(x);
-
-       // System.out.println("here " + getDateStartTimeFromHTML(x));
-
-        // System.out.println(dateTime.getYear() );
-
-
-    }
-
-
+    /**
+     * Take the HTML string and return the date / time
+     *
+     * @param hTML the HTML string we wat to get the Date/ start time from
+     * @return The parsed locatDateTime
+     */
     public static LocalDateTime getDateStartTimeFromHTML(String hTML) {
 
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
@@ -71,7 +62,6 @@ public class WebScraper {
                 .toFormatter(Locale.ENGLISH);
 
         return LocalDateTime.parse(hTML, formatter);
-
     }
 
 
@@ -83,21 +73,24 @@ public class WebScraper {
     private static LocalDateTime SanitizeDate(String dateToSanatize) {
 
         LocalDateTime dateTime1 = null;
+      // LocalTime endTime =  null;
+
         DateTimeFormatter formatter1 = new DateTimeFormatterBuilder()
                 .appendPattern("HH:mm, E d MMM")
                 .parseDefaulting(ChronoField.YEAR, 2018)
                 .toFormatter(Locale.ENGLISH);
 
 
-        if (dateToSanatize.contains("–")) {
-            String endtime = dateToSanatize.substring(5, 13);
-            System.out.println(dateToSanatize.replace(endtime, ""));
-            System.out.println(endtime.replace("–", ""));
+        String endtimeHTML = dateToSanatize.substring(5, 13);
+        dateTime1 = LocalDateTime.parse(dateToSanatize.replace(endtimeHTML, ""), formatter1);
 
-            dateTime1 = LocalDateTime.parse(dateToSanatize.replace(endtime, ""), formatter1);
-            System.out.println("r b"+dateTime1);
+       // endTime of event if specified
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("  HH:mm");
+       endTime = LocalTime.parse(endtimeHTML.replace("–",""), dateTimeFormatter);
+      //  System.out.println(endTime);
 
-        }
+
+
         return dateTime1;
     }
 
@@ -127,12 +120,12 @@ public class WebScraper {
      */
     private static void populateListOfEvents(List<Events> upcomingEvents, Element tableData) {
 
-        LocalDateTime EventTime  = null;
+        LocalDateTime EventTime = null;
 
-        if (!tableData.select(EVENT_TIME).text().contains("–"))
-        {
+        if (!tableData.select(EVENT_TIME).text().contains("–")) {
             EventTime = getDateStartTimeFromHTML(tableData.select(EVENT_TIME).text());
-        }else{
+            endTime = null;
+        } else {
             EventTime = SanitizeDate(tableData.select(EVENT_TIME).text());
         }
 
@@ -141,6 +134,7 @@ public class WebScraper {
                 .setDetails("")
                 .setLocation(tableData.select(EVENT_LOCATION).text())
                 .setTime(EventTime)
+                .setEndTime(endTime)
                 .createEvents();
 
 
