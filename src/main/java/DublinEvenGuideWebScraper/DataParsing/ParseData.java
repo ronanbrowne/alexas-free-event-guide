@@ -1,3 +1,5 @@
+package DublinEvenGuideWebScraper.DataParsing;
+
 import java.time.LocalDateTime;
 
 public interface ParseData {

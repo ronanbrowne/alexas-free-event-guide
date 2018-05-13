@@ -1,4 +1,4 @@
-package webScraper;
+package DublinEvenGuideWebScraper.DataModel;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
