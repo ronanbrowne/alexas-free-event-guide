@@ -1,16 +1,13 @@
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import webScraper.Events;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.time.temporal.ChronoField;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class WebScraper {
 
@@ -19,7 +16,7 @@ public class WebScraper {
     private static final String EVENT_NAME = "tbody > tr > td > table > tbody > tr > td:nth-child(2) > h2";
 
 
-    static LocalTime endTime ;
+    static LocalTime endTime;
 
     public static void main(String[] args) {
 
@@ -45,7 +42,7 @@ public class WebScraper {
         System.out.println("Total number of events retrieved: " + upcomingEvents.size());
 
 
-  }
+    }
 
 
     /**
@@ -54,7 +51,7 @@ public class WebScraper {
      * @param hTML the HTML string we wat to get the Date/ start time from
      * @return The parsed locatDateTime
      */
-    public static LocalDateTime getDateStartTimeFromHTML(String hTML) {
+/*    public static LocalDateTime getDateStartTimeFromHTML(String hTML) {
 
         DateTimeFormatter formatter = new DateTimeFormatterBuilder()
                 .appendPattern("HH:mm, E d MMM")
@@ -62,7 +59,7 @@ public class WebScraper {
                 .toFormatter(Locale.ENGLISH);
 
         return LocalDateTime.parse(hTML, formatter);
-    }
+    }*/
 
 
     /**
@@ -70,10 +67,10 @@ public class WebScraper {
      *
      * @param dateToSanatize date returned from the event.
      */
-    private static LocalDateTime SanitizeDate(String dateToSanatize) {
+  /*  private static LocalDateTime SanitizeDate(String dateToSanatize) {
 
         LocalDateTime dateTime1 = null;
-      // LocalTime endTime =  null;
+        // LocalTime endTime =  null;
 
         DateTimeFormatter formatter1 = new DateTimeFormatterBuilder()
                 .appendPattern("HH:mm, E d MMM")
@@ -84,16 +81,15 @@ public class WebScraper {
         String endtimeHTML = dateToSanatize.substring(5, 13);
         dateTime1 = LocalDateTime.parse(dateToSanatize.replace(endtimeHTML, ""), formatter1);
 
-       // endTime of event if specified
+        // endTime of event if specified
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("  HH:mm");
-       endTime = LocalTime.parse(endtimeHTML.replace("–",""), dateTimeFormatter);
-      //  System.out.println(endTime);
-
+        endTime = LocalTime.parse(endtimeHTML.replace("–", ""), dateTimeFormatter);
+        //  System.out.println(endTime);
 
 
         return dateTime1;
     }
-
+*/
     /**
      * specify what data we want to retrieve from the URL
      *
@@ -122,11 +118,14 @@ public class WebScraper {
 
         LocalDateTime EventTime = null;
 
+        ParseDataImp parseDataImp = new ParseDataImp();
+
         if (!tableData.select(EVENT_TIME).text().contains("–")) {
-            EventTime = getDateStartTimeFromHTML(tableData.select(EVENT_TIME).text());
+            EventTime = parseDataImp.getDateStartTimeFromHTML(tableData.select(EVENT_TIME).text());
             endTime = null;
         } else {
-            EventTime = SanitizeDate(tableData.select(EVENT_TIME).text());
+            EventTime = parseDataImp.SanitizeDate(tableData.select(EVENT_TIME).text());
+            endTime=parseDataImp.getEndTime();
         }
 
         Events eventDetails = new Events.EventsBuilder()
@@ -159,10 +158,10 @@ public class WebScraper {
      * @param dayAttribuateFromHTML
      * @return string stripped of extra data
      */
-    private static String sanitizeDay(String dayAttribuateFromHTML) {
+/*    private static String sanitizeDay(String dayAttribuateFromHTML) {
         String regex = "\\s*\\bback to top\\b\\s*";
         return dayAttribuateFromHTML.replaceAll(regex, "");
-    }
+    }*/
 
 
 }
