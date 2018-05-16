@@ -26,7 +26,7 @@ public class HelloWorldIntentHandler implements RequestHandler {
      */
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Hello world";
+        String speechText = "Hello you bad mother fuckers";
 
 
         return input.getResponseBuilder()

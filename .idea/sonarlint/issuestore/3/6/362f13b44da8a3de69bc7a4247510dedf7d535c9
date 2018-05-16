@@ -1,0 +1,4 @@
+
+ssquid:S4144"WUpdate this method so that its implementation is not identical to "getTime" on line 32.(ãï©8¿çâ¶,
+osquid:S00116"RRename this field "Details" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ°úä8¿çâ¶,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğì‚µ8¿çâ¶,

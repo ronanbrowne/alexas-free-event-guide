@@ -15,13 +15,16 @@ public class HelloWorldStreamHandler extends SkillStreamHandler {
      */
     private static Skill getSkill() {
         return Skills.standard()
-                .addRequestHandlers(new CancelandStopIntentHandler(), new HelloWorldIntentHandler(), new LaunchRequestHandler())
+                .addRequestHandlers(new CancelandStopIntentHandler(),
+                        new HelloWorldIntentHandler(),
+                        new LaunchRequestHandler())
+                .withSkillId("amzn1.ask.skill.955002f3-cf32-4623-9e36-033a3c90fdce")
                 .build();
     }
 
 
 
-    public HelloWorldStreamHandler(Skill skill) {
-        super(skill);
+    public HelloWorldStreamHandler() {
+        super(getSkill());
     }
 }

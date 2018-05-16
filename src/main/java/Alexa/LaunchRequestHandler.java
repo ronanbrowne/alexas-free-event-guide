@@ -36,7 +36,7 @@ public class LaunchRequestHandler implements RequestHandler {
         String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard("whats up mother fuckers", speechText)
                 .withReprompt(speechText)
                 .build();
     }

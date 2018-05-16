@@ -51,8 +51,8 @@ public class ParseDataImp implements ParseData {
         dateTime1 = LocalDateTime.parse(dateToSanatize.replace(endtimeHTML, ""), formatter1);
 
         // endTime of event if specified
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("  HH:mm");
-        endTime = LocalTime.parse(endtimeHTML.replace("–", ""), dateTimeFormatter);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(" HH:mm");
+        endTime = LocalTime.parse(endtimeHTML.replace(" –", ""), dateTimeFormatter);
         //  System.out.println(endTime);
 
 
