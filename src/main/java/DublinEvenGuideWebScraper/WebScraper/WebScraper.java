@@ -13,6 +13,17 @@ import java.util.List;
 public class WebScraper {
 
 
+    List<Events> todaysEvents = new ArrayList<>();
+
+    public  List<Events> gettodaysEvents(){
+
+        return  todaysEvents;
+    }
+
+    public static void setTodaysEvents(List<Events> todaysEvents) {
+        todaysEvents = todaysEvents;
+    }
+
     public static void main(String[] args) {
 
         //initialization
@@ -34,6 +45,8 @@ public class WebScraper {
         // test todays midnight System.out.println(LocalDateTime.now().toLocalDate().atStartOfDay());
 
         todaysEvents = EventManager.getEventsForRestOFToday(upcomingEvents);
+;
+        setTodaysEvents(todaysEvents);
 
         System.out.println(todaysEvents.size());
 

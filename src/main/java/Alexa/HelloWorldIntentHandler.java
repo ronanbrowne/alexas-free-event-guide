@@ -1,5 +1,6 @@
 package Alexa;
 
+import DublinEvenGuideWebScraper.WebScraper.WebScraper;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
@@ -28,10 +29,15 @@ public class HelloWorldIntentHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
         String speechText = "Hello you bad mother fuckers";
 
+        WebScraper webScraper = new WebScraper();
+        String[] yourArgs = new String[] {"foo", "baz", "bar"};
+
+        webScraper.main(yourArgs);
+
 
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard("HelloWorld", "x number is "+webScraper.gettodaysEvents())
                 .build();
     }
 }

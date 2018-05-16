@@ -24,14 +24,15 @@
   <component name="ChangeListManager">
     <list default="true" id="58908a16-2a54-4f2e-83c6-4ca3a174a77f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/alexaSkillHelloWorld_jar/alexaSkillHelloWorld.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/alexaSkillHelloWorld_jar/alexaSkillHelloWorld.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldStreamHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldStreamHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Alexa/LaunchRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Alexa/LaunchRequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/alexaSkill-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/alexaSkill-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Alexa/HelloWorldIntentHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Alexa/HelloWorldIntentHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Alexa/HelloWorldStreamHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Alexa/HelloWorldStreamHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Alexa/LaunchRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Alexa/LaunchRequestHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DublinEvenGuideWebScraper/WebScraper/WebScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DublinEvenGuideWebScraper/WebScraper/WebScraper.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,10 +62,12 @@
       <file leaf-file-name="WebScraper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="438">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloWorldIntentHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HelloWorldIntentHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            <state relative-caret-position="476">
+              <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParseDataImp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParseDataImp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="223">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,8 +167,8 @@
       <file leaf-file-name="EventManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/Support/EventManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="72">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,9 +213,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ParseDataImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/webScraper/Support/EventManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/WebScraper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Alexa/LaunchRequestHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldStreamHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/Support/EventManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java" />
@@ -240,8 +243,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2269" />
-    <option name="y" value="24" />
+    <option name="x" value="-2510" />
+    <option name="y" value="25" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
@@ -462,7 +465,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44532000" />
+    <option name="totallyTimeSpent" value="45826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2109" y="25" width="2033" height="1331" extended-state="6" />
@@ -488,10 +491,11 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" x="0" y="0" width="434" height="848" id="Documentation" order="17" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39965695" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3601359" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17100562" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5120069" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3593482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21745789" />
       <window_info anchor="bottom" id="SonarLint" order="8" weight="0.32933104" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32933104" />
       <window_info anchor="right" id="Theme Preview" order="12" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -518,7 +522,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32961375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39570814" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Designer" order="2" />
@@ -536,15 +539,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -566,6 +561,8 @@
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -648,6 +645,8 @@
           <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,6 +710,8 @@
           <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -890,13 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DublinEvenGuideWebScraper/Support/EventManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -926,16 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Alexa/LaunchRequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -943,12 +927,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="21">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/Support/EventManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/WebScraper/WebScraper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -965,20 +978,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/Support/EventManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Alexa/HelloWorldIntentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DublinEvenGuideWebScraper/DataParsing/ParseDataImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="476">
+          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
